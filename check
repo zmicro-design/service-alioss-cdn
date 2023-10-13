@@ -15,7 +15,7 @@ check() {
   service::config_set SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_ID text "OSS Access Key ID"
   service::config_set SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_SECRET text "OSS Access Key Secret"
   service::config_set SERVICE_ALIOSS_CDN_OSS_BUCKET text "OSS Bucket"
-  service::config_set SERVICE_ALIOSS_CDN_OSS_ENDPOINT text "OSS Endpoint"
+  service::config_set SERVICE_ALIOSS_CDN_OSS_ENDPOINT text "OSS Endpoint" "oss-cn-shanghai.aliyuncs.com"
   service::config_set SERVICE_ALIOSS_CDN_OSS_DIRECTORY text "OSS Directory"
 }
 
