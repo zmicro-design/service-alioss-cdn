@@ -10,7 +10,7 @@ check() {
     cat $SERVICE_CONFIG
   fi
 
-  service::config_set SERVICE_ALIOSS_CDN_PORT text "Port" 8024
+  service::config_set SERVICE_ALIOSS_CDN_PORT text "Port" 8080
 
   service::config_set SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_ID text "OSS Access Key ID"
   service::config_set SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_SECRET text "OSS Access Key Secret"
