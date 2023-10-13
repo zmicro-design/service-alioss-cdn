@@ -1,0 +1,18 @@
+services:
+  alioss-cdn:
+    restart: always
+    image: whatwewant/alioss-cdn:${SERVICE_ALIOSS_CDN_IMAGE_VERSION}
+    # ports:
+    #   - 0.0.0.0:${SERVICE_ALIOSS_CDN_PORT}:${SERVICE_ALIOSS_CDN_PORT}
+    environment:
+      PORT: $SERVICE_ALIOSS_CDN_PORT
+      ACCESS_KEY_ID: ${SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_ID}
+      ACCESS_KEY_SECRET: ${SERVICE_ALIOSS_CDN_OSS_ACCESS_KEY_SECRET}
+      BUCKET: ${SERVICE_ALIOSS_CDN_OSS_BUCKET}
+      ENDPOINT: ${SERVICE_ALIOSS_CDN_OSS_ENDPOINT}
+      DIRECTORY: ${SERVICE_ALIOSS_CDN_OSS_DIRECTORY}
+      
+networks:
+  default:
+    external: true
+    name: compose-ingress

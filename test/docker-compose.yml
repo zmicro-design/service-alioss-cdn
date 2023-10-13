@@ -1,0 +1,13 @@
+services:
+  alioss-cdn:
+    restart: always
+    image: whatwewant/alioss-cdn:${SERVICE_ALIOSS_CDN_IMAGE_VERSION}
+    environment:
+      PORT: $SERVICE_ALIOSS_CDN_PORT
+      USERNAME: ${SERVICE_ALIOSS_CDN_USERNAME}
+      PASSWORD: ${SERVICE_ALIOSS_CDN_PASSWORD}
+      
+networks:
+  default:
+    external: true
+    name: compose-ingress
